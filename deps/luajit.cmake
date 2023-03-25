@@ -394,6 +394,7 @@ MACRO(LUAJIT_add_custom_commands luajit_target)
           ${source_file}
           ${generated_file}
         COMMENT "Building Luajitted ${source_file}: ${generated_file}"
+        WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
       )
 
       get_filename_component(basedir ${generated_file} PATH)
